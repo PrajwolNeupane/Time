@@ -1,13 +1,11 @@
 import express from 'express';
 const app = express();
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
 
 app.use(express.static('public'));
 
 // Define routes
 app.get('/', (req, res) => {
-  res.sendFile("index.html",{root: path.join(__dirname, 'public')});
+  res.sendFile("index.html");
 });
 
 // Start the server
