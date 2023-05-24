@@ -1,11 +1,14 @@
-const express = require('express');
+import express from 'express';
 const app = express();
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static('public'));
 
 // Define routes
 app.get('/', (req, res) => {
-  res.send('/index.html');
+  res.sendFile(__dirname + "/index.html");
 });
 
 // Start the server
