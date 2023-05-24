@@ -13,15 +13,15 @@ h3 {
 }
 .head {
   font-size: 100px;
-  color: rgb(41, 41, 41);
+  color: rgb(27, 1, 61);
 }
-.description{
-  color: rgb(41, 41, 41);
+.description {
+  color: rgb(27, 1, 61);
 }
-.time{
-    font-family: 'Besley', serif;
-    color: rgb(41, 41, 41);
-    font-size: 70px;
+.time {
+  font-family: "Besley", serif;
+  color: rgb(27, 1, 61);
+  font-size: 70px;
 }
 .flex-col {
   width: 100%;
