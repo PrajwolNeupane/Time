@@ -1,0 +1,34 @@
+* {
+  margin: 0px;
+  font-family: "Playfair Display", serif;
+}
+h1 {
+  font-weight: 600;
+}
+h2 {
+  font-weight: 500;
+}
+h3 {
+  font-weight: 400;
+}
+.head {
+  font-size: 100px;
+  color: rgb(41, 41, 41);
+}
+.description{
+  color: rgb(41, 41, 41);
+}
+.time{
+    font-family: 'Besley', serif;
+    color: rgb(41, 41, 41);
+    font-size: 70px;
+}
+.flex-col {
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 248, 200);
+}
