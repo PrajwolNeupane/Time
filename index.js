@@ -16,10 +16,11 @@ function getTime() {
   const minutes = Math.floor(duration / 1000 / 60) % 60;
   const hours = Math.floor(duration / 1000 / 60 / 60) % 24;
   const days = Math.floor(duration / 1000 / 60 / 60 / 24) % 30;
-  const months = (Math.floor(duration / 1000 / 60 / 60 / 24 / 30) % 12) + 1;
+  const months = Math.floor(duration / 1000 / 60 / 60 / 24 / 30) % 12;
   const years = Math.floor(duration / 1000 / 60 / 60 / 24 / 365);
 
   element.innerText = `${years}/${months}/${days} ${hours}:${minutes}:${seconds}`;
+  document.getElementById("days").innerHTML = `Day : ${days + months * 30}`;
 }
 
 getTime();
