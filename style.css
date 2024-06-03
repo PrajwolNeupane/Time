@@ -2,27 +2,41 @@
   margin: 0px;
   font-family: "Playfair Display", serif;
 }
+
 h1 {
   font-weight: 600;
 }
+
 h2 {
   font-weight: 500;
 }
+
 h3 {
   font-weight: 400;
 }
+
 .head {
   font-size: 100px;
   color: rgb(27, 1, 61);
 }
+
 .description {
   color: rgb(27, 1, 61);
 }
+
 .time {
   font-family: "Besley", serif;
   color: rgb(27, 1, 61);
   font-size: 70px;
 }
+
+img {
+  width: 20%;
+  clip-path: url(#heartClip);
+  position: absolute;
+  top: 0%;
+}
+
 .flex-col {
   width: 100%;
   height: 100vh;
