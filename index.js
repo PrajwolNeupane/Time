@@ -10,18 +10,17 @@ var time = 1;
 const targetDate = new Date("2023-02-04T22:05:45");
 
 function getTime() {
-  const currentDate = new Date(); 
+  const now = moment();
 
-  // Calculate the time difference in milliseconds
-  const duration = currentDate - targetDate;
+  const duration = moment.duration(now.diff(targetDate));
 
-  // Convert the duration to the desired units (e.g., milliseconds, seconds, minutes)
-  const seconds = Math.floor(duration / 1000) % 60;
-  const minutes = Math.floor(duration / (1000 * 60)) % 60;
-  const hours = Math.floor(duration / (1000 * 60 * 60)) % 24;
-  const days = Math.floor(duration / (1000 * 60 * 60 * 24)) % 30;
-  const months = Math.floor(duration / (1000 * 60 * 60 * 24 * 30.44)) % 12; // Average days per month
-  const years = Math.floor(duration / (1000 * 60 * 60 * 24 * 365));
+  const years = Math.floor(duration.asYears());
+  const months = Math.floor(duration.asMonths()) % 12;
+  const days = Math.floor(duration.asDays()) % 30;
+  const hours = Math.floor(duration.asHours()) % 24;
+  const minutes = Math.floor(duration.asMinutes()) % 60;
+  const seconds = Math.floor(duration.asSeconds()) % 60;
+
 
   element.innerText = `${years}/${months}/${days} ${hours}:${minutes}:${seconds}`;
   document.getElementById("days").innerHTML = `Day : ${Math.floor(duration / (1000 * 60 * 60 * 24))}`;
